@@ -49,7 +49,7 @@ static int create(sox_effect_t * effp, int argc, char * * argv)
       case 'M': p->phase =  0; break;
       case 'I': p->phase = 25; break;
       case 'L': p->phase = 50; break;
-      GETOPT_NUMERIC(optstate, 'n', num_taps[1], 11, 32767)
+        GETOPT_NUMERIC(optstate, 'n', num_taps[1], 11, 1073741823)
       case 't': p->tbw1 = lsx_parse_frequency(optstate.arg, &parse_ptr2);
         if (p->tbw1 < 1 || *parse_ptr2) return lsx_usage(effp);
         break;

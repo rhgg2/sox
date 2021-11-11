@@ -553,9 +553,9 @@ static int create(sox_effect_t * effp, int argc, char **argv)
     GETOPT_NUMERIC(optstate, 'B', bw_0dB_pc, 53, 99.5)
     GETOPT_NUMERIC(optstate, 'A', anti_aliasing_pc, 85, 100)
     GETOPT_NUMERIC(optstate, 'd', bit_depth, 15, 33)
-    GETOPT_LOCAL_NUMERIC(optstate, 'b', bw_3dB_pc, 74, 99.7)
-    GETOPT_LOCAL_NUMERIC(optstate, 'R', rej, 90, 200)
-    GETOPT_LOCAL_NUMERIC(optstate, 'Q', quality, 0, 7)
+      GETOPT_LOCAL_NUMERIC(optstate, 'b', bw_3dB_pc, 74, 99.999999)
+      GETOPT_LOCAL_NUMERIC(optstate, 'R', rej, 90, 200)
+      GETOPT_LOCAL_NUMERIC(optstate, 'Q', quality, 0, 7)
     case 'M': p->phase =  0; break;
     case 'I': p->phase = 25; break;
     case 'L': p->phase = 50; break;
